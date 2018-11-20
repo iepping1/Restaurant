@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CategoriesActivity">
+    tools:context=".MenuActivity">
 
     <ListView
-        android:id="@+id/listview"
+        android:id="@+id/listMenu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="match_parent" />
 </android.support.constraint.ConstraintLayout>
