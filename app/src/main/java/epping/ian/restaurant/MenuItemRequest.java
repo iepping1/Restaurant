@@ -36,10 +36,10 @@ public class MenuItemRequest implements Response.ErrorListener, Response.Listene
             this.callback = callback;
             this.category = category;
 
-            // link to the API site
+            // link to API site
             String url = "https://resto.mprog.nl/menu";
 
-            // request the data from the API
+            // request the data from API
             RequestQueue queue = Volley.newRequestQueue(context);
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null, this, this);
             queue.add(jsonObjectRequest);
@@ -49,7 +49,7 @@ public class MenuItemRequest implements Response.ErrorListener, Response.Listene
         @Override
         public void onResponse(JSONObject response) {
 
-            // define the menu fields
+            // define menu fields
             String name;
             String description;
             String imageUrl;
@@ -68,8 +68,8 @@ public class MenuItemRequest implements Response.ErrorListener, Response.Listene
                     JSONObject item = jsonArray.getJSONObject(i);
                     String itemCategory = item.getString("category");
 
+                    // get all info from site
                     if(this.category.equals(itemCategory)) {
-                        // get all info from the site
                         name = item.getString("name");
                         description = item.getString("description");
                         imageUrl = item.getString("image_url");

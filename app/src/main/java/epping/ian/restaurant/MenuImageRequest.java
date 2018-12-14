@@ -22,7 +22,7 @@ public class MenuImageRequest {
     private RequestQueue queue;
     private static MenuImageRequest requestInstance;
 
-    // constructor for context parameter
+    // request images from API site
     public MenuImageRequest(Context context) {
         myContext = context;
         queue = getRequestQueue();
@@ -49,6 +49,7 @@ public class MenuImageRequest {
         return requestInstance;
     }
 
+    // form request
     public RequestQueue getRequestQueue() {
         if (queue == null) {
             Cache cache = new DiskBasedCache(myContext.getCacheDir(), 10 * 1024 * 1024);

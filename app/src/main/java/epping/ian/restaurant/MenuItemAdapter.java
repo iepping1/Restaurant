@@ -57,8 +57,6 @@ public class MenuItemAdapter extends ArrayAdapter<MenuItem> {
         imageLoader = MenuImageRequest.getInstance(this.getContext())
                 .getImageLoader();
         imaged.setImageUrl(image, imageLoader);
-        //MenuImageRequest imageRequest = new MenuImageRequest(context);
-        //imageRequest.getImage(item.getImageURL(), new ImageCallback(imaged));
 
         return convertView;
     }

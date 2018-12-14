@@ -14,10 +14,10 @@ import java.util.ArrayList;
 
 public class CategoriesActivity extends AppCompatActivity implements CategoriesRequest.Callback {
 
-    // initialize the listview
+    // initialize list
     ListView list;
 
-    // create the category window
+    // create category window
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,20 +41,19 @@ public class CategoriesActivity extends AppCompatActivity implements CategoriesR
 
     @Override
     public void gotCategoriesError(String message) {
+
         // send a message if error has occured
         Toast toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
         toast.show();
     }
 
-    // switch to menu window when an item from the list is clicked
+    // switch to menu window when an item from list is clicked
     private class ListClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
             Intent intent = new Intent(CategoriesActivity.this, MenuActivity.class);
             intent.putExtra("category", (String) adapterView.getItemAtPosition(i));
-
-            // access to the new window
             startActivity(intent);
         }
     }

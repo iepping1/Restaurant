@@ -23,7 +23,7 @@ public class MenuItemActivity extends AppCompatActivity {
         Intent intent = getIntent();
         MenuItem menuItem = (MenuItem) intent.getSerializableExtra("menu_item");
 
-        // give it the proper data
+        // add proper data
         TextView named = findViewById(R.id.item_name);
         TextView described = findViewById(R.id.item_description);
         TextView priced = findViewById(R.id.item_price);

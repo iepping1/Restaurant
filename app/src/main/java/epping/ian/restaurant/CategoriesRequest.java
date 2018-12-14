@@ -12,7 +12,7 @@ import org.json.JSONException;
 
 import java.util.ArrayList;
 
-// requests the download of JSON objects
+// requests download of JSON objects
 public class CategoriesRequest implements Response.ErrorListener, Response.Listener<JSONObject> {
     private Context context;
     private Callback callback;
@@ -45,7 +45,7 @@ public class CategoriesRequest implements Response.ErrorListener, Response.Liste
     @Override
     public void onResponse(JSONObject response) {
 
-        //define the list of categories
+        // define list of categories
         ArrayList<String> categories = new ArrayList<>();
 
         try {

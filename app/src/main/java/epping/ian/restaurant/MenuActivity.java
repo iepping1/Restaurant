@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class MenuActivity extends AppCompatActivity implements MenuItemRequest.Callback{
 
-    // create the menu window
+    // create menu window
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +20,10 @@ public class MenuActivity extends AppCompatActivity implements MenuItemRequest.C
 
         Intent intent = getIntent();
 
-        // catch the menu item
+        // catch menu item
         String category = intent.getStringExtra("category");
 
-        // get the menu from the site
+        // get menu from site
         MenuItemRequest request = new MenuItemRequest(this, category);
         request.getMenuItems(this, category);
     }
@@ -40,12 +40,13 @@ public class MenuActivity extends AppCompatActivity implements MenuItemRequest.C
 
     @Override
     public void gotMenuItemsError(String message) {
+
         // send a message if error has occured
         Toast toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
         toast.show();
     }
 
-    // switch to choice when an item from menu is clicked
+    // move to window with clicked item from list
     public class ListClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

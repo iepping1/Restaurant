@@ -4,11 +4,11 @@ import java.io.Serializable;
 
 public class MenuItem implements Serializable{
 
-    //create class for all menu fields
+    //create classes for all menu fields
     private String name, description, imageURL, category;
     private double price;
 
-    //store the fields of the menu
+    //store menu fields
     public MenuItem(String name, String description, String imageURL, Double price, String category) {
         this.name = name;
         this.description = description;
@@ -17,7 +17,7 @@ public class MenuItem implements Serializable{
         this.category = category;
     }
 
-    // retrieve the fields
+    // retrieve fields
     String getName() { return name; }
 
     String getDescription() { return description; }
